@@ -112,97 +112,24 @@ const Contact = () => {
           </div>
           
           <div>
-            <form onSubmit={handleSubmit} className="bg-gray-50 dark:bg-gray-700 rounded-lg shadow-md p-8">
-              <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-              
-              <div className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Your Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="John Doe"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Your Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Subject
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="Project Inquiry"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-                
-                <button
-                  type="submit"
-                  disabled={isSubmitting || submitStatus === 'success'}
-                  className={`w-full py-3 px-6 rounded-md text-white font-medium ${
-                    isSubmitting 
-                      ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed' 
-                      : submitStatus === 'success'
-                        ? 'bg-green-600 dark:bg-green-500 cursor-not-allowed'
-                        : 'bg-blue-600 dark:bg-blue-500 hover:bg-blue-700 dark:hover:bg-blue-600'
-                  } transition-colors duration-300 flex items-center justify-center`}
-                >
-                  {isSubmitting ? (
-                    <span>Sending...</span>
-                  ) : submitStatus === 'success' ? (
-                    <span>Message Sent!</span>
-                  ) : (
-                    <>
-                      <Send size={18} className="mr-2" />
-                      <span>Send Message</span>
-                    </>
-                  )}
-                </button>
-              </div>
+            <form>
+              <div className="bg-gray-900 rounded-lg p-4">
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSdH455GHYOeDbc1pWHaG-y5VsW3A8aunu7lStDYYp59i-4RXA/viewform?embedded=true"
+    width="100%"
+    height="700"
+    frameBorder="0"
+    marginHeight={0}
+    marginWidth={0}
+    title="Contact Form"
+    className="w-full rounded-md"
+    style={{ backgroundColor: 'transparent' }}
+  >
+    Loading…
+  </iframe>
+</div>
+
+
             </form>
           </div>
         </div>
